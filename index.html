@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <title>Image Api</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY?</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label for="">ENTER YOUR NAME</label>
+                <input type="text" name="" id="nameid">
+            </div>
+            <div class="imgdiv">
+                <img src="images.jpeg" width="200" height="200" alt="" id ="imgchange">
+
+
+            </div>
+            <button id ="btn">Click Me</button>
+        </div>
+    </section>
+    <script>
+        const nameEl =document.getElementById("nameid");
+        const btnEl =document.getElementById("btn");
+        const imgEl =document.getElementById("imgchange");
+        btnEl.addEventListener("click",()=>{
+                const name =nameEl.value;
+                alert(name);
+                // https://joeschmoe.io/api/v1/
+                imgEl.setAttribute("src", `https://joeschmoe.io/api/v1/${name}`);
+
+
+        });
+
+    </script>
+</body>
+</html>
